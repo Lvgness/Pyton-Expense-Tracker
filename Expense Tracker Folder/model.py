@@ -180,7 +180,7 @@ class ExpenseTracker:
                 amount=item['amount'],
                 category=item['category'],
                 date=item['date'],
-                # The loaded expense must use its original ID, not a new one
+                # Make sure expenses use their original ID, not a new one
                 id=item['id'] 
             )
             self.expenses.append(new_expense)
