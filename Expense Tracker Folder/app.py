@@ -29,7 +29,7 @@ class ExpenseTrackerGUI:
     def _create_widgets(self):
         """Sets up the main input and control widgets."""
         
-        # Main button frame (for add and remove so far)
+        # Main button frame
         main_button_frame = ttk.LabelFrame(self.master, text="Expense Tracker Operations", padding="10")
         main_button_frame.pack(padx=10, pady=10, fill="x")
 
@@ -214,7 +214,7 @@ class ExpenseTrackerGUI:
     def _update_display(self, expense_data: Optional[List[Dict[str, Any]]] = None):
         """Refreshes the Treeview list and the summary label."""
 
-        # If no specific data is passed (e.g., on initialization), get ALL data
+        # If no specific data is passed (e.g., on initialization), get all data
         if expense_data is None:
             expense_data = self.tracker.get_all_expenses_data()
 
